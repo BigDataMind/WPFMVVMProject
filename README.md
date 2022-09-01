@@ -7,3 +7,4 @@
 
 ## 2.MenuOrderMvvm.Prism
 ### 这是一个比较完整的项目、用到Prism
+### 业务上是一个桌面订餐系统，数据用XML形式
