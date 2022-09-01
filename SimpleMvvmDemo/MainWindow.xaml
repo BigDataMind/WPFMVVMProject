@@ -1,0 +1,26 @@
+﻿<Window x:Class="SimpleMvvmDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SimpleMVVMDemo" Height="350" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Save" Command="{Binding SaveCommand}"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox Name="tb1" Grid.Row="0" Background="LightBlue" FontSize="24" Margin="4" Text="{Binding Input1}"/>
+            <TextBox Name="tb2" Grid.Row="1" Background="LightBlue" FontSize="24" Margin="4" Text="{Binding Input2}"/>
+            <TextBox Name="tb3" Grid.Row="2" Background="LightBlue" FontSize="24" Margin="4" Text="{Binding Result}"/>
+            <Button Name="addBtn" Grid.Row="3" Content="Add" Width="120" Height="60"  Margin="10,5" Command="{Binding AddCommand}"/>
+            <Button x:Name="ModifyUIBtn" Grid.Row="4" Content="ModifyUI" Width="120" Height="60" Margin="10,5" Click="ModifyUIBtn_Click"/>
+        </Grid>
+    </Grid>
+</Window>
